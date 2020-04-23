@@ -3,10 +3,10 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
      
     var Phone = require('voip.PhoneCallDetails');
 
-    Phone.PhoneCallDetails = Phone.PhoneCallDetails.extend({
+    Phone = Phone.extend({
         
         
     });
 
-    return PhoneCallDetails;
+    return Phone;
 });
