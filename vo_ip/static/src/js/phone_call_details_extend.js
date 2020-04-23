@@ -14,8 +14,8 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
          * @constructor
          */
         init: function (parent, phonecall) {
-            //this._super.apply(this, arguments);
-            this._super(...arguments);
+            this._super.apply(this, arguments);
+            console.log("hola mundo");
         },
 
     });
