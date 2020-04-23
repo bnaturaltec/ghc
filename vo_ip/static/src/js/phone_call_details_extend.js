@@ -1,9 +1,15 @@
 odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     "use strict";
-     
-    var Phone = require('voip.PhoneCallDetails');
+    const core = require('web.core');
+    const session = require('web.session');
+    const Widget = require('web.Widget');
 
-    Phone = Phone.extend({
+    const QWeb = core.qweb;
+    const _t = core._t;
+
+    const Phone = require('voip.PhoneCallDetails');
+
+    Phone.PhoneCallDetails = Phone.PhoneCallDetails.extend({
            /**
          * @constructor
          */
