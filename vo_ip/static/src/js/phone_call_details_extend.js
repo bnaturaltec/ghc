@@ -4,6 +4,10 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
 
     Phone.PhoneCallDetails =  Phone.PhoneCallDetails.include({
 
+        start() {
+            this._super(...arguments);
+        },
+
     });
     
 
