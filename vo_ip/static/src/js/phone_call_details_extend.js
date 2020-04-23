@@ -8,5 +8,5 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
         
     });
 
-    return Phone;
+
 });
