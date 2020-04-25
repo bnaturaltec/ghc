@@ -41,24 +41,23 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
         _onToSaleOrderClick: function (ev) {
             console.log("click");
             ev.preventDefault();
-            let resId = this.partnerId;
-            if (resId !== undefined) {
+            if (this.partner_id) {
                 this.do_action({
-                    res_id: resId,
-                    res_model: "sale.order",
-                    target: 'current',
                     type: 'ir.actions.act_window',
+                    res_model: "sale.order",
                     views: [[false, 'form']],
+                    target: 'current',
+                    context: {
+                        default_partner_id: this.partner_id,
+                    },
                 });
             } else {
                 this.do_action({
-                    context: {
-                        default_partner_id : resId,
-                    },
-                    res_model: 'sale.order',
-                    target: 'current',
                     type: 'ir.actions.act_window',
+                    res_model: "sale.order",
                     views: [[false, 'form']],
+                    target: 'current',
+                    context: {},
                 });
             }
         },
