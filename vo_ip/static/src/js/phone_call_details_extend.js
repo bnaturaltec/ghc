@@ -10,7 +10,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     const QWeb = core.qweb;
     const _t = core._t;
   
-    const PhoneCallDetails = Phone.extend({
+    const PhoneCallDetails = Phone.prototype.extend({
           /**
      * TODO: reduce coupling between PhoneCallDetails & PhoneCall
      *
