@@ -1,6 +1,6 @@
 odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     "use strict";
-    var Phone = require('voip.PhoneCallDetails');
+    const Phone = require('voip.PhoneCallDetails');
     
     console.log("este es el widget",Phone);
     const core = require('web.core');
@@ -10,7 +10,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     const QWeb = core.qweb;
     const _t = core._t;
   
-    Phone = Phone.extend({
+    const PhoneResult = Phone.extend({
         
         events: _.extend({}, Phone.prototype.events, {
             'click .o_dial_activity_done': '_onClickActivityDone',
@@ -94,6 +94,6 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     
 
 
-return phone;
+return PhoneResult;
 
 });
