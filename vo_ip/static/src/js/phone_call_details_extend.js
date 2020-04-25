@@ -10,7 +10,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     const QWeb = core.qweb;
     const _t = core._t;
   
-    const PhoneCallDetails = Phone.prototype.extend({
+    Phone.include({
           /**
      * TODO: reduce coupling between PhoneCallDetails & PhoneCall
      *
@@ -34,9 +34,6 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
 
     });
   
-    
 
-console.log("override",PhoneCallDetails);
-return PhoneCallDetails;
 
 });
