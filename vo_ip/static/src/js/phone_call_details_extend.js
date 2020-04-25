@@ -86,7 +86,6 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
                         default_phone: this.phoneNumber,
                         default_mobile: this.mobileNumber,
                         */
-                        default_partner_id: resId,
                     },
                     res_model: 'sale.order',
                     target: 'current',
