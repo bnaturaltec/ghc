@@ -1,6 +1,6 @@
 odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     "use strict";
-    const Phone = require('voip.PhoneCallDetails');
+    var Phone = require('voip.PhoneCallDetails');
     
     console.log("este es el widget",Phone);
     const core = require('web.core');
@@ -34,6 +34,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
 
     });
   
-
+    
+    console.log("override",Phone)
 
 });
