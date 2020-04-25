@@ -26,21 +26,19 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
          */
         init(parent, phoneCall) {
             this._super(...arguments);
-            console.log("init overrude");
         },
         /**
          * @override
          */
         start() {
             this._super(...arguments);
-            console.log("start overrude");
         },
            /**
          * @private
          * @param {MouseEvent} ev
          * @return {Promise}
          */
-        async _onClickToPartner(ev) {
+        async _onToSaleOrderClick(ev) {
             ev.preventDefault();
             let resId = this.partnerId;
             if (!this.partnerId) {
