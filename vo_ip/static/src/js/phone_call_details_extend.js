@@ -10,7 +10,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     const QWeb = core.qweb;
     const _t = core._t;
   
-    const PhoneResult = Phone.extend({
+    const PhoneCallDetails = Phone.extend({
         
         events: _.extend({}, Phone.prototype.events, {
             'click .o_dial_activity_done': '_onClickActivityDone',
@@ -95,6 +95,6 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     
 
 
-return PhoneResult;
+return PhoneCallDetails;
 
 });
