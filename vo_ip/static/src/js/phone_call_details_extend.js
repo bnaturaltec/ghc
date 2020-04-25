@@ -5,7 +5,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     console.log("este es el widget",Phone);
 
   
-    Phone.extend({
+    return Phone.extend({
         
         
     });
