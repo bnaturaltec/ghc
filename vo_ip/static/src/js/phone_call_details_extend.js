@@ -4,7 +4,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     
     PhoneCallDetails = PhoneCallDetails.include({
 
-        events: _.extend({}, Phonecall.PhonecallDetails.events, {
+        events: _.extend({}, PhoneCallDetails.prototype.events, {
             'click .o_dial_activity_done': '_onClickActivityDone',
             'click .o_dial_call_number': '_onClickCallNumber',
             'click .o_dial_activity_cancel': '_onClickCancel',
