@@ -1,15 +1,7 @@
 odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     "use strict";
-    var Phone = require('voip.PhoneCallDetails.PhoneCallDetails');
+    var Phone = require('voip.PhoneCallDetails');
     
-    console.log("este es el widget",Phone);
-    const core = require('web.core');
-    const session = require('web.session');
-    const Widget = require('web.Widget');
-
-    const QWeb = core.qweb;
-    const _t = core._t;
-  
     Phone.extend({
           /**
      * TODO: reduce coupling between PhoneCallDetails & PhoneCall
