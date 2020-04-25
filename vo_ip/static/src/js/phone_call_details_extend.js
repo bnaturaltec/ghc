@@ -40,6 +40,6 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
     });
   
     
-    console.log(Phone);
+    console.log(PhoneCallDetails);
 
 });
