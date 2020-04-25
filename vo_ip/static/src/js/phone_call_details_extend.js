@@ -39,6 +39,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
          * @return {Promise}
          */
         async _onToSaleOrderClick(ev) {
+            console.log("click");
             ev.preventDefault();
             let resId = this.partnerId;
             if (!this.partnerId) {
@@ -85,7 +86,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
                         default_phone: this.phoneNumber,
                         default_mobile: this.mobileNumber,
                         */
-                        default_partner_id: this.partnerId,
+                        default_partner_id: resId,
                     },
                     res_model: 'sale.order',
                     target: 'current',
