@@ -34,6 +34,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
          */
         async _onToSaleOrderClick(ev) {
             ev.preventDefault();
+            console.log('press');
             let resId = this.partnerId;
             if (!this.partnerId) {
                 let domain = [];
