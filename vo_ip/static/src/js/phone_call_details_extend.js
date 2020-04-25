@@ -12,7 +12,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
          */
         init: function (parent, phonecall) {
             this._super.apply(this, arguments);
-            console.log("hello world");
+            console.log("--------hello world------------");
         },
 
     });
