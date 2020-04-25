@@ -21,7 +21,7 @@ odoo.define('voip.PhoneCallDetailsExtend', function (require) {
         }),
     }))
 
-    Phone = Phone.extend({
+    Phone.extend({
         
         
     });
