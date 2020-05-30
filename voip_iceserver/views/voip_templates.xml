@@ -1,0 +1,7 @@
+<odoo>
+    <template id="backend_inherit" inherit_id="web.assets_backend">
+        <xpath expr="//script[@src='/voip/static/lib/sip.js']" position="replace">
+             <script type="text/javascript" src="/voip_iceserver/static/lib/sip.js"></script>
+        </xpath>
+    </template>
+</odoo>

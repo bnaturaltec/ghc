@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="utm_did_numbers.list">
+      <field name="name">utm.did_numbers list</field>
+      <field name="model">utm.did_numbers</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="did_number"/>
+          <field name="source"/>
+          <field name="medium"/>
+          <field name="campaign"/>
+          <field name="company"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="utm_did_numbers.action_window">
+      <field name="name">DID Numeros</field>
+      <field name="res_model">utm.did_numbers</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="utm_did_numbers.action_server">
+      <field name="name">utm_did_numbers server</field>
+      <field name="model_id" ref="model_utm_did_numbers_utm_did_numbers"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Menu item with actions-->
+    <menuitem name="DID Numeros"
+	   id="utm_did_numbers.menu"
+	   parent="utm.marketing_utm"
+	   action="utm_did_numbers.action_window"
+	   sequence="11"/>
+  </data>
+</odoo>
