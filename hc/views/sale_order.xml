@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+   
+        <!--Sale Order-->
+        <record model="ir.ui.view" id="view_sale_order_tree_inherit">
+            <field name="name">sale.order.tree.inherit.hc.state</field>
+            <field name="model">sale.order</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <!--<field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>-->
+            <field name="arch" type="xml">
+                    <field name="state" position = "before">
+                    <field name="order_state"/>
+                    </field>
+            </field>
+        </record>
+
+  <record id="view_sale_order_form_inherit" model="ir.ui.view">
+            <field name="name">view.sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+
+              <field name="partner_id" position="replace">
+                <field name="partner_id"/>
+              </field>
+
+              <field name="partner_id" position="after">
+                 <field  name="address" class="o_address_format"/>
+                 <field name="phone" widget="phone" readonly="0"/>
+                 <field name="movil" widget="phone" readonly="0"/>
+              </field>
+
+              <field name="validity_date" position="before">
+                 <field name="confirmador"/>
+                 <button name='set_confirmador' string="Tomar Orden"  type="object" class="oe_highlight"/>
+                 <field name="order_state" />
+              </field>
+
+            </field>
+    </record>
+
+   <!--Confirmador Group-->
+
+  <record id="view_sale_order_form_inherit_confirmador" model="ir.ui.view">
+            <field name="name">view.sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(4, ref('hc.group_confirmador'))]"/>
+            <field name="arch" type="xml">
+              
+              <field name="confirmador" position="attributes">
+                <attribute name = 'readonly'>1</attribute>
+              </field>
+
+            </field>
+    </record>
+
+    <!--Seller Group-->
+
+  <record id="view_sale_order_form_inherit_seller" model="ir.ui.view">
+            <field name="name">view.sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="groups_id" eval="[(4, ref('hc.group_seller'))]"/>
+            <field name="arch" type="xml">
+              
+              <xpath expr="//page[@name='other_information']" position="attributes">
+                <attribute name="invisible">1</attribute>
+              </xpath>
+              <div class="oe_button_box" name="button_box" position="replace">
+              </div>
+
+              <button name="action_confirm" type="object" attrs="{'invisible': [('state', 'not in', ['draft'])]}" position="replace">
+              </button> 
+
+              <button name="action_quotation_send"  type="object" states="draft" class="btn-primary" position="replace">
+              </button>
+              
+              <field name="confirmador" position="attributes">
+                <attribute name = 'readonly'>1</attribute>
+              </field>
+
+              <button name='set_confirmador' type="object" class="oe_highlight" position="attributes">
+                <attribute name="invisible">1</attribute>
+              </button>
+
+            </field>
+    </record>
+
+  </data>
+</odoo>
