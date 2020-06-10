@@ -33,6 +33,8 @@
         'views/sale_order.xml',
         'views/hc_state.xml',
         'views/access_views.xml',
+        'views/stock_quant.xml',
+
     ],
     # only loaded in demonstration mode
     #'demo': [
