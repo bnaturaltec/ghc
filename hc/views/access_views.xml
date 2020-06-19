@@ -48,5 +48,79 @@
         </record>
 	
 
+        <!--Inventario - Menu Principal -->
+        <record id="stock.menu_stock_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[   (4, ref('group_hidden_menu') ),
+                                              (4, ref('group_inventario_reporte_inventario') )
+                                          ]"/>
+        </record>
+
+        <!--Inventario/Información General -->
+        <record id="stock.stock_picking_type_menu" model="ir.ui.menu">
+            <field name="groups_id"
+                   eval="[   (4, ref('group_hidden_menu') ),
+                             (4, ref('stock.group_stock_user') ),
+                         ]"/>
+        </record>
+        
+        <!--Ajustes de Inventario -->
+        <record id="stock.menu_action_inventory_form" model="ir.ui.menu">
+            <field name="groups_id"
+                   eval="[   (4, ref('group_hidden_menu') ),
+                             (4, ref('stock.group_stock_manager') ),
+                         ]"/>
+        </record>
+        
+        <!-- Inventario/Informes-->
+        <record id="stock.menu_warehouse_report" model="ir.ui.menu">
+            <field name="groups_id"
+                   eval="[   (4, ref('group_hidden_menu') ),
+                             (4, ref('stock.group_stock_manager') ),
+                             (4, ref('group_inventario_reporte_inventario') ),
+                         ]"/>
+        </record>
+        
+        <!--Inventario/Informes Reporte de Inventario-->
+        <record id="stock.menu_valuation" model="ir.ui.menu">
+            <field name="groups_id"
+                   eval="[   (4, ref('group_hidden_menu') ),
+                             (4, ref('stock.group_stock_manager') ),
+                             (4, ref('group_inventario_reporte_inventario') ),
+                         ]"/>
+        </record>
+        
+        <!-- Inventario Operaciones -->
+        <record id="stock.menu_stock_warehouse_mgmt" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[   (4, ref('group_hidden_menu') ),
+                          (4, ref('stock.group_stock_user') ),
+                         ]"/>
+        </record>
+        
+        <!-- Inventario Datos Principales -->
+        <record id="stock.menu_stock_inventory_control" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[   (4, ref('group_hidden_menu') ),
+                          (4, ref('stock.group_stock_user') ),
+                         ]"/>
+        </record>
+        
+        <!-- Inventario/Informes/InventarioPrevisto -->
+        <record id="stock.menu_forecast_inventory" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[   (4, ref('group_hidden_menu') ),
+                          (4, ref('stock.group_stock_user') ),
+                         ]"/>
+        </record>
+        
+        <!-- Inventario/Informes/Movimientos productos -->
+        <record id="stock.stock_move_line_menu" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[   (4, ref('group_hidden_menu') ),
+                          (4, ref('stock.group_stock_user') ),
+                         ]"/>
+        </record>
+        	
+
     </data>
 </odoo>
