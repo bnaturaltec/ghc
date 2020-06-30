@@ -34,7 +34,7 @@ class UtmDidNumbers(http.Controller):
         if str(odoo_data_token) == str(model_odoo_system_parameters_record.value):
             log.info("\nSI ES IGUAL EL ODOO DATA TOKEN")
         else:
-            error_message = "\nTOKEN NO VALIDO, CONFIGURAR/AGREGAR EN ODOO SYSTEM PARAMETERS, VARIABLE voip.curl Y EL ID"
+            error_message = "\nTOKEN NO VALIDO, CONFIGURAR/AGREGAR EN ODOO SYSTEM PARAMETERS, VARIABLE voip.curl_token Y EL ID"
             log.info(error_message)
             return error_message
         
