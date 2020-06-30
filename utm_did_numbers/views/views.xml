@@ -7,10 +7,11 @@
       <field name="arch" type="xml">
         <tree>
           <field name="did_number"/>
-          <field name="source"/>
-          <field name="medium"/>
-          <field name="campaign"/>
-          <field name="company"/>
+          <field name="source_id"/>
+          <field name="medium_id"/>
+          <field name="campaign_id"/>
+          <field name="company_id"/>
+          <field name="country_id"/>
         </tree>
       </field>
     </record>
