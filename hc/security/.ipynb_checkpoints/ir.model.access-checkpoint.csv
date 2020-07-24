@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hc_administrador,hc.administrador,hc.model_hc_state,sales_team.group_sale_manager,1,1,1,1
+access_hc_readonly,hc.readonly,hc.model_hc_state,base.group_user,1,0,0,0
