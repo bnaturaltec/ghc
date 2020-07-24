@@ -30,7 +30,7 @@
         'views/templates.xml',  
         'views/product_product.xml',
         'views/product_template.xml',
-        'views/sale_order.xml',
+        #'views/sale_order.xml',
         'views/hc_state.xml',
         'views/access_views.xml',
         'views/stock_quant.xml',
