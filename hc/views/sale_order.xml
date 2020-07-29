@@ -110,7 +110,7 @@
     </record>
 
    <!--Confirmador Group-->
-
+   <!-- Commented: Error in sale_order view, confirmador is not presented in the current view 
   <record id="view_sale_order_form_inherit_confirmador" model="ir.ui.view">
             <field name="name">view.sale.order.form.inherit</field>
             <field name="model">sale.order</field>
@@ -124,6 +124,7 @@
 
             </field>
     </record>
+  -->
 
     <!--Seller Group-->
 
