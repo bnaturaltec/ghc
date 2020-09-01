@@ -54,6 +54,13 @@ class UtmDidNumbers(http.Controller):
         if phone and did_number:
             model = http.request.env['utm.did_numbers']
             did_number_data = model.sudo().search([("did_number","=",did_number)])
+            
+            if len(did_number_data) > 1:
+                error_message = "\nERROR: DIDs DUPLICADOS EN MODULO UTM, cantidad: " \
+                + str(len(did_number_data)) + " IDs: " + str(did_number_data) + "\n"
+                    
+                log.info(error_message )
+                return error_message
 
         else:
             log.info("\n==== Phone or DID Number empty =====\n")
