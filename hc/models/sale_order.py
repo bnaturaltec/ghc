@@ -11,7 +11,7 @@ class SaleOrder(models.Model):
                     string='Estado Interno',
                     default = lambda self: self.env['hc.state'].search([("sequence","=",0)]) )
     
-    delivery_notes = fields.Text(string='Notas de Entrega')
+    delivery_notes = fields.Text(string='Horario de Entrega')
     
     country_id = fields.Char(string='País',related='partner_id.country_id.name',store = True)
     country_id_code = fields.Char(string='País',related='partner_id.country_id.code',store = True)
