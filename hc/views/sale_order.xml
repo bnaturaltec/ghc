@@ -24,6 +24,14 @@
             <field name="priority">97</field>
             <field name="arch" type="xml">
 
+            <xpath
+                   expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='name']"
+                   position="attributes">
+              <attribute name="attrs">{}</attribute>
+              <attribute name="force_save">True</attribute>
+              <attribute name="readonly">1</attribute>
+            </xpath>
+
               <field name="payment_term_id" position="after">
                 <field name="warehouse_id"/>
                 <field name="delivery_notes"/>
@@ -155,14 +163,6 @@
               <button name='set_confirmador' type="object" class="oe_highlight" position="attributes">
                 <attribute name="invisible">1</attribute>
               </button>
-
-              <xpath
-                   expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/tree[1]/field[@name='name']"
-                   position="attributes">
-                <attribute name="attrs">{}</attribute>
-                <attribute name="force_save">True</attribute>
-                <attribute name="readonly">True</attribute>
-              </xpath>
                 
             </field>
     </record>
