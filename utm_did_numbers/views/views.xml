@@ -9,12 +9,12 @@
                 <sheet>
                     <group col="4" colspan="4">
                       <field name="datetime"/>
-                      <field name="did_number"/>
+                      <field name="did_number" help="Número al que llaman los clientes"/>
                       <field name="source_id"/>
                       <field name="medium_id"/>
                       <field name="campaign_id"/>
-                      <field name="user_id" string="Supervisor"/>
-                      <field name="team_id" string="Grupo CRM"/>
+                      <field name="user_id" string="Supervisor" help="Usuario al que se le asignan por default esta oportunidad"/>
+                      <field name="team_id" string="Grupo Callcenter" help="Grupo de CallCenter/CRM al que se le asigna por default esta oportunidad"/>
                       <field name="company_id"/>
                       <field name="country_id"/>
                     </group>
