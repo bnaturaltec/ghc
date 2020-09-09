@@ -8,7 +8,7 @@
            <form string="DID Numbers" edit="true" create="true" delete="true">
                 <sheet>
                     <group col="4" colspan="4">
-                      <field name="datetime"/>
+                      <field name="datetime" help="Fecha de referencia, que se utiliza en los medios"/>
                       <field name="did_number" help="Número al que llaman los clientes"/>
                       <field name="source_id"/>
                       <field name="medium_id"/>
