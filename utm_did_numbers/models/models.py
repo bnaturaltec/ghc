@@ -13,4 +13,7 @@ class utm_did_numbers(models.Model):
     campaign_id = fields.Many2one('utm.campaign', string='Campaña')
     company_id = fields.Many2one('res.company', string='Companía')
     country_id = fields.Many2one('res.country', string='País')
+    user_id = fields.Many2one('res.users')
+    team_id = fields.Many2one('crm.team')
+    datetime = fields.Datetime(string='Fecha')
 
