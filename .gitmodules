@@ -2,3 +2,7 @@
 	path = l10n_cr_zones
 	url = git@github.com:stefanjaw/l10n_cr_zones.git
 	branch = odoo_v13
+[submodule "telephony"]
+	path = telephony
+	url = git@github.com:stefanjaw/telephony.git
+	branch = odoo_v13
