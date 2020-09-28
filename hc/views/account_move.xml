@@ -16,6 +16,23 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="account_move_tree_customization">
+        <field name="name">account.move.tree.customization</field>
+        <field name="model">account.move</field>
+        <field name="type">tree</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="priority">98</field>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//tree[1]/field[@name='name']" position="after">
+                <field name="state_id"/>
+                <field name="canton_id"/>
+                <field name="distrito_id"/>
+            </xpath>
+            
+        </field>
+    </record>
+
     <record model="ir.ui.view" id="account_invoice_select_customization">
         <field name="name">account.invoice.select.customization</field>
         <field name="model">account.move</field>
