@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- form multi -->
+		<record id="bt_account_payment_multi_form_view" model="ir.ui.view">
+			<field name="name">account.payment.register.form</field>
+			<field name="model">account.payment.register</field>
+			<field name="inherit_id" ref="account.view_account_payment_form_multi"/>
+			<field name="arch" type="xml">
+				
+				<xpath expr="//field[@name='journal_id']" position="after">
+
+					<field name="ref_payment"/>
+					
+				</xpath>
+				
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -2,10 +2,11 @@
 # Developer: Carlos Avila.
 # Mail: car.josavica@gmail.com
 # Boostech CR
+# 21.07.13
 
 {
     'name' : 'Referencia de pago',
-    'version' : '21.07.12',
+    'version' : '21.07.13',
     'summary': 'Registrar información de referencia del pago',
     'sequence': 0,
     'description': """
@@ -28,7 +29,8 @@ Contiene
         'account',
     ],
     'data': [
-        'views_inherits/views_bt_account_payment.xml'        
+        'views_inherits/views_bt_account_payment_register.xml',
+        'views_inherits/views_bt_account_payment.xml'
     ],
     'demo': [
     ],
