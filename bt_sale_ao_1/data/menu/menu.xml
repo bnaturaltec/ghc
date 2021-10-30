@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="id_sm_bt_sale_order_driver" name="Driver" parent="sale.menu_sale_config"
+                    action="action_bt_sale_order_driver_view" sequence="30"/>
+
+        <menuitem id="id_sm_bt_sale_order_label" name="Label" parent="sale.menu_sale_config"
+                    action="action_bt_sale_order_label_view" sequence="35"/>
+                    
+		
+	</data>
+</odoo>

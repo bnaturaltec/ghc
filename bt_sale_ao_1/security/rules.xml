@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="bt_sale_order_driver_rule" model="ir.rule">
+			<field name="name">BT - Sale Order - Driver</field>
+			<field name="model_id" ref="model_bt_sale_order_driver"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in', company_ids)]</field>
+		</record>
+
+		<record id="bt_sale_order_label_rule" model="ir.rule">
+			<field name="name">BT - Sale Order - Label</field>
+			<field name="model_id" ref="model_bt_sale_order_label"/>
+			<field name="domain_force">['|',('company_id','=',False),('company_id','in', company_ids)]</field>
+		</record>
+
+	</data>
+</odoo>

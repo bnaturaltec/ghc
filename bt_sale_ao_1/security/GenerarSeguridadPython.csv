@@ -1,0 +1,7 @@
+Proyecto Nombre;Carpeta del Modelo;Modelo;Perfil;perm_read;perm_write;perm_create;perm_unlink;group_primary
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.driver;manager;1;1;1;0;account.group_account_manager
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.label;manager;1;1;1;0;account.group_account_manager
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.driver;user;1;1;1;0;account.group_account_invoice
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.label;user;1;1;1;0;account.group_account_invoice
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.driver;user;1;0;0;0;base.group_portal
+bt_sale_ao_1;bt_sale_ao_1;bt.sale.order.label;user;1;0;0;0;base.group_portal
